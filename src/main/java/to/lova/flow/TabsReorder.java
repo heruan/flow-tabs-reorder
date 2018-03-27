@@ -29,13 +29,12 @@ public class TabsReorder extends Div {
 
     public TabsReorder() {
         Tabs tabs = new Tabs();
-        Tab first = new Tab("First");
-        Tab second = new Tab("Second");
-        tabs.add(first, second);
+        Tab foo = new Tab("Foo");
+        Tab bar = new Tab("Bar");
+        tabs.add(foo, bar);
         this.add(tabs);
-        this.add(new Button("Swap", event -> tabs.replace(first, second)));
-        this.add(new Button("Select first",
-                event -> tabs.setSelectedTab(first)));
+        this.add(new Button("Swap", event -> tabs.replace(foo, bar)));
+        this.add(new Button("Select Foo", event -> tabs.setSelectedTab(foo)));
     }
 
 }
